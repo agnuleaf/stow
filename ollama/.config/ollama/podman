@@ -1,0 +1,6 @@
+# Requires ollama local, nvidia drivers and cuda(install through distro), nvidia-container-toolkit(see nv>
+# TODO how to use pipelines for llamaindex and chromadb? :memo: Note: is 7-8gb in size. Uses default port>
+# You can rerun with podman-desktop too
+pod_webui() {
+    podman run --replace -d --network=host --device nvidia.com/gpu=all --security-opt=label=disable -v open-w>
+}
