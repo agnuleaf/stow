@@ -1,0 +1,2 @@
+# for the Starship prompt in a bash terminal
+eval "$(starship init bash)"

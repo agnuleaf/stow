@@ -1,0 +1,7 @@
+# fzf functions
+# depends on bat 
+
+# fzf preview with bat
+fzfp () {
+    fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"
+}

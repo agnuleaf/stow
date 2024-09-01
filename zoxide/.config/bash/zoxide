@@ -1,0 +1,7 @@
+# Zoxide 
+
+# environment variables to set before init
+#_ZO_EXCLUDE_DIRS #
+#_ZO_FZF_OPTS # custom options to pass fzf see man fzf 
+#_ZO_RESOLVE_SYMLINKS
+eval "$(zoxide init bash)"

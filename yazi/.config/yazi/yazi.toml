@@ -3,10 +3,10 @@
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [manager]
-ratio          = [ 1, 4, 3 ]
+ratio          = [ 1, 3, 4 ]
 sort_by        = "alphabetical"
 sort_sensitive = false
-sort_reverse 	 = false
+sort_reverse   = false
 sort_dir_first = true
 sort_translit  = false
 linemode       = "none"
@@ -76,13 +76,13 @@ rules = [
 	{ name = "*", use = [ "open", "reveal" ] },
 ]
 
-[tasks]
-micro_workers    = 10
-macro_workers    = 25
-bizarre_retry    = 5
-image_alloc      = 536870912  # 512MB
-image_bound      = [ 0, 0 ]
-suppress_preload = false
+#[tasks]
+#micro_workers    = 10
+#macro_workers    = 25
+#bizarre_retry    = 5
+#image_alloc      = 536870912  # 512MB
+#image_bound      = [ 0, 0 ]
+#suppress_preload = false
 
 [plugin]
 
@@ -101,6 +101,12 @@ preloaders = [
 	# Font
 	{ mime = "font/*", run = "font" },
 	{ mime = "application/vnd.ms-opentype", run = "font" },
+]
+# bat plugin github mgumz/yazi-plugin-bat
+prepend_previewers = [
+	{ name = "*.csv", run = "bat" },
+	{ name = "*.md", run = "glow" },
+#	{ name = "*.md, exect = "bat" }
 ]
 previewers = [
 	{ name = "*/", run = "folder", sync = true },
